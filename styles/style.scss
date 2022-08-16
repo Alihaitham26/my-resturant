@@ -1,5 +1,10 @@
 $text-color:#e75b1e;
 *{box-sizing: border-box;}
+.container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 @media (min-width:786px){
     .container{
         width: 720px;
@@ -26,17 +31,24 @@ $text-color:#e75b1e;
         background-color: transparent;
     }
 }
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
 body{
+    height: 100%;
     font-size: 16pt;
     margin: 0;
     font-family: 'Lobster', cursive;
 }
 nav {
+    position: fixed;
     width: 100%;
     height: 60px;
     background-color: #202020;
     display: flex;
     justify-content: space-around;
+    z-index: 5;
     .container{
         display: flex;
         justify-content: space-between;
@@ -68,8 +80,8 @@ nav {
     }
 }
 .home{
-    width: 100%;
-    height: calc(100vh - 60px);
+    min-width: 100%;
+    height: 100%;
     background-image: url("../images/banner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -93,8 +105,6 @@ nav {
             a{
                 text-decoration: none;
                 color: #fff;
-                font-size: 20pt;
-                font-weight: bold;
                 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
             }
             animation: in 1s;
@@ -112,9 +122,52 @@ nav {
         h2{
             font-size: 25pt;
         }
-        button a{
-            font-size: 10pt;
-            height: 50px;
+        button{
+            width: fit-content;
+            a{
+                font-size: 10pt;
+                height: 50px;
+            }
         }
+    }
+}
+.menu{
+    background-color: #ddd;
+    margin-top: 20px;
+    height: 100%;
+    padding-top:60px;
+    width: 100%;
+    h2{
+        text-align: center;
+        font-size: 30pt;
+    }
+    .meals{
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .meal{
+            width: calc(50% - 40px);
+            display: flex;
+            justify-content: space-between;
+            margin-left: 40px;
+            margin-bottom: 20px;
+            padding:0px 10px;
+            div{
+                display: flex;
+                align-items: center;
+                img{
+                   border-radius: 50%;
+                   margin-right: 10px;
+                   height: 80px;
+                   width: 80px;
+                }
+            }
+        }
+    }
+}
+@media (max-width:768px){
+    .menu .meals .meal{
+        width: 100%;
     }
 }
