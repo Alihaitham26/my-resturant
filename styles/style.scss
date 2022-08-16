@@ -11,13 +11,19 @@ $text-color:#e75b1e;
     }
 }
 @keyframes in{
+    from{
+        background-color: transparent;
+    }
     to{
         background-color: $text-color;
     }
 }
 @keyframes out{
-    to{
+    from{
         background-color: $text-color;
+    }
+    to{
+        background-color: transparent;
     }
 }
 body{
@@ -80,9 +86,9 @@ nav {
             margin-bottom: 6px ;
         }
         button{
-            animation: in 1s reverse;
             &:hover{
                 animation: out 1s;
+                animation-fill-mode: forwards;
             }
             a{
                 text-decoration: none;
@@ -91,6 +97,8 @@ nav {
                 font-weight: bold;
                 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
             }
+            animation: in 1s;
+            animation-fill-mode: forwards;
             border: 3px solid $text-color;
             background-color: transparent;
             width: 20%;

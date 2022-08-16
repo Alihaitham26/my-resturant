@@ -13,23 +13,35 @@
   }
 }
 @-webkit-keyframes in {
+  from {
+    background-color: transparent;
+  }
   to {
     background-color: #e75b1e;
   }
 }
 @keyframes in {
+  from {
+    background-color: transparent;
+  }
   to {
     background-color: #e75b1e;
   }
 }
 @-webkit-keyframes out {
-  to {
+  from {
     background-color: #e75b1e;
+  }
+  to {
+    background-color: transparent;
   }
 }
 @keyframes out {
-  to {
+  from {
     background-color: #e75b1e;
+  }
+  to {
+    background-color: transparent;
   }
 }
 body {
@@ -96,7 +108,10 @@ nav .container ul li a {
   margin-bottom: 6px;
 }
 .home .text button {
-  animation: in 1s reverse;
+  -webkit-animation: in 1s;
+          animation: in 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   border: 3px solid #e75b1e;
   background-color: transparent;
   width: 20%;
@@ -106,6 +121,8 @@ nav .container ul li a {
 .home .text button:hover {
   -webkit-animation: out 1s;
           animation: out 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .home .text button a {
   text-decoration: none;
