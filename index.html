@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>my resturant</h1>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#menu">menu</a></li>
+                <li><a href="#booking">booking</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="home" id="home">
+        <div class="text">
+            <h2>dinner with us</h2>
+            <button><a href="#booking">book now!</a></button>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <h2>menu</h2>
+        <div class="meals container">
+            <div class="meal">
+                <div>
+                    <img src="images/menu-item-thumbnail-01.jpg">
+                    <h3>garlic bread</h3>
+                </div>
+                <p>5$</p>
+            </div>
+            <div class="meal">
+                <div>
+                    <img src="images/menu-item-thumbnail-02.jpg">
+                    <h3>mixed salad</h3>
+                </div>
+                <p>3$</p>
+            </div>
+            <div class="meal">
+                <div>
+                    <img src="images/menu-item-thumbnail-03.jpg">
+                    <h3>chicken wings</h3>
+                </div>
+                <p>20$</p>
+            </div>
+            <div class="meal">
+                <div>
+                    <img src="images/menu-item-thumbnail-04.jpg">
+                    <h3>pizza</h3>
+                </div>
+                <p>10$</p>
+            </div>
+            <div class="meal">
+                <div>
+                    <img src="images/menu-item-thumbnail-05.jpg">
+                    <h3>spicy meatballs</h3>
+                </div>
+                <p>25$</p>
+            </div>
+            <div class="meal">
+                <div>
+                    <img src="images/menu-item-thumbnail-06.jpg">
+                    <h3>pasta</h3>
+                </div>
+                <p>8$</p>
+            </div>
+            <div class="meal">
+                <div>
+                    <img src="images/menu-item-thumbnail-07.jpg">
+                    <h3>tea</h3>
+                </div>
+                <p>1$</p>
+            </div>
+            <div class="meal">
+                <div>
+                    <img src="images/menu-item-thumbnail-08.jpg">
+                    <h3>coffe</h3>
+                </div>
+                <p>2$</p>
+            </div>
+        </div>
+    </div>
+    <div class="booking" id="booking">
+        <div class="input">
+            <label for="date">please insert date:</label>
+            <input type="date" min="1-1-2022" name="date" id="dateInput">
+        </div>
+        
+        <div class="status" id="status" style="display: none;">
+            <p class="free">20 free tables</p>
+            <hr/>
+            <p class="text"></p>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
