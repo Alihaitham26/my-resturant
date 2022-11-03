@@ -1,0 +1,216 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 786px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+@keyframes in {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: #e75b1e;
+  }
+}
+@keyframes out {
+  from {
+    background-color: #e75b1e;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: 16pt;
+  margin: 0;
+  font-family: "Lobster", cursive;
+  background-color: #ddd;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: #202020;
+  display: flex;
+  justify-content: space-around;
+  z-index: 5;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+nav .container h1 {
+  color: #e75b1e;
+  margin: 0;
+}
+nav .container ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+nav .container ul li {
+  margin: 8px;
+}
+nav .container ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  nav .container {
+    justify-content: space-around;
+  }
+  nav .container ul {
+    display: none;
+  }
+}
+.home {
+  min-width: 100%;
+  height: 100%;
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home .text {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.home .text h2 {
+  color: #e75b1e;
+  font-size: 50pt;
+  margin-bottom: 6px;
+}
+.home .text button {
+  animation: in 1s;
+  animation-fill-mode: forwards;
+  border: 3px solid #e75b1e;
+  background-color: transparent;
+  width: 20%;
+  height: 70px;
+  border-radius: 5px;
+}
+.home .text button:hover {
+  animation: out 1s;
+  animation-fill-mode: forwards;
+}
+.home .text button a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .home .text h2 {
+    font-size: 25pt;
+  }
+  .home .text button {
+    width: fit-content;
+  }
+  .home .text button a {
+    font-size: 10pt;
+    height: 50px;
+  }
+}
+.menu {
+  margin-top: 20px;
+  min-height: 100%;
+  height: fit-content;
+  padding-top: 60px;
+  width: 100%;
+}
+.menu h2 {
+  text-align: center;
+  font-size: 30pt;
+}
+.menu .meals {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.menu .meals .meal {
+  width: calc(50% - 40px);
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+.menu .meals .meal div {
+  display: flex;
+  align-items: center;
+}
+.menu .meals .meal div img {
+  border-radius: 50%;
+  margin-right: 10px;
+  height: 80px;
+  width: 80px;
+}
+
+@media (max-width: 768px) {
+  .menu .meals .meal {
+    width: 100%;
+  }
+}
+.booking {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+}
+.booking .input {
+  display: block;
+  margin: auto;
+  width: 200px;
+  font-size: 18pt;
+}
+.booking .input input {
+  margin: 0;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  font-size: 18pt;
+}
+.booking .status {
+  border: 2px solid black;
+  width: 300px;
+  font-size: 20pt;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.booking .status hr {
+  color: #202020;
+}
+.booking .status p {
+  margin: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
